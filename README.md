@@ -1,43 +1,48 @@
 # MOTION
 
-> Premium Digital Design Studio — modulare, statische Showcase-Website für Brand Experience, Web und Motion.
+> Premium Digital Design Studio — art-directed static showcase for Brand, Digital and Motion.
 
-## Visual Direction
+![Hero visual](assets/hero-visual.svg)
 
-MOTION kombiniert die zuletzt definierte helle Premium-Art-Direction mit transluzenten UI-Flächen, kühlen Blau-/Violett-/Pink-Verläufen, organischen Formen und einer präzisen Motion-Ebene. Das Hero-Visual ist als eigenständige SVG-Komposition angelegt und ergänzt das CSS-basierte Dashboard.
+## Positionierung
 
-## Features
+MOTION ist eine fiktive Premium-Digitalstudio-Website mit einer bewusst art-directed, editorialen Oberfläche. Die aktuelle Version verbindet eine dunkle visuelle Basis, Glasflächen, leuchtende Farbverläufe, abstrakte SVG-Visuals und zurückhaltende Motion-Interaktionen.
 
-- Responsive Single-Page-Website
-- Semantische HTML5-Struktur
-- Sticky Navigation mit internen Anchor-Links
-- Hero mit interaktivem 3D-Parallax-Dashboard
-- Eigenständige SVG-Visuals für Hero, NOVA und AURA
-- CSS-basierte Glow-, Blob-, Ring- und Chart-Animationen
-- IntersectionObserver Fade-Up Reveal
-- `prefers-reduced-motion` Unterstützung
-- Kontakt über `mailto:hello@motion.studio`
-- Keine Frameworks, keine Build-Tools, keine CDNs
-- GitHub-Pages-kompatibel über `.nojekyll`
+## Highlights
 
-## Structure
+- Hochwertige Hero-Komposition mit interaktivem Dashboard
+- Standalone SVG-Artwork für Hero, NOVA, AURA und Logo
+- Responsive Single-Page-Architektur
+- Sticky Glass-Navigation und native Anchor-Navigation
+- Brand Experience, Web Experiences und Motion Systems als Kernleistungen
+- Zwei visuelle Case Studies: NOVA und AURA
+- Pointer-Parallax auf Desktop
+- IntersectionObserver Reveal-System
+- `prefers-reduced-motion`-Unterstützung
+- Tastatur-Fokuszustände für zentrale Interaktionen
+- Keine Frameworks, keine Build-Tools, keine externen Bild-/Font-CDNs
+- Direkt lokal und GitHub-Pages-kompatibel
+
+## Architektur
 
 ```text
 motion-studio/
-├── index.html              # kanonischer Einstieg
-├── script.js               # Vanilla JS interactions
+├── index.html
+├── script.js
 ├── .nojekyll
 ├── README.md
 ├── assets/
-│   ├── logo.svg            # Brand Mark
-│   ├── hero-visual.svg     # Hero / Monitor composition
-│   ├── nova-visual.svg     # NOVA artwork
-│   └── aura-visual.svg     # AURA artwork
+│   ├── logo.svg
+│   ├── hero-visual.svg
+│   ├── nova-visual.svg
+│   └── aura-visual.svg
 ├── docs/
-│   ├── DE.md               # technische Dokumentation Deutsch
-│   ├── EN.md               # technische Dokumentation Englisch
-│   ├── ASSETS.md           # SVG / Visual asset guide
-│   └── DEPLOYMENT.md       # statisches Deployment
+│   ├── ACCESSIBILITY.md
+│   ├── ASSETS.md
+│   ├── DE.md
+│   ├── EN.md
+│   ├── DESIGN_SYSTEM.md
+│   └── VISUAL_QA.md
 └── styles/
     ├── tokens.css
     ├── base.css
@@ -48,43 +53,47 @@ motion-studio/
     └── animations.css
 ```
 
-## Architecture
+## Assets
 
-`index.html` ist der einzige kanonische HTML-Einstieg und bindet die modularen CSS-Dateien sowie `script.js` ein.
+Die Visuals werden als lokale SVG-Dateien versioniert. Dadurch bleiben die Grafiken skalierbar, editierbar und offline verfügbar.
 
-`styles/` trennt Design-Tokens, globale Regeln, Hero/Services/Projects-Komponenten, Responsive-Regeln und Motion-Keyframes.
+- `assets/logo.svg` — MOTION Markenmarke
+- `assets/hero-visual.svg` — abstrakte Hero-Komposition
+- `assets/nova-visual.svg` — NOVA Case Study
+- `assets/aura-visual.svg` — AURA Case Study
 
-`assets/` enthält versionierbare SVG-Grafiken. Sie können offline geladen werden und benötigen keinen Bildserver.
+Weitere Informationen: [`docs/ASSETS.md`](docs/ASSETS.md) und [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md).
 
-`docs/` beschreibt technische Architektur, Assets, Accessibility und Deployment in Deutsch und Englisch.
+## Dokumentation
 
-## Interaction & Motion
+- [Deutsch — technische Dokumentation](docs/DE.md)
+- [English — technical documentation](docs/EN.md)
+- [Design System](docs/DESIGN_SYSTEM.md)
+- [Accessibility](docs/ACCESSIBILITY.md)
+- [Asset Guide](docs/ASSETS.md)
+- [Visual QA](docs/VISUAL_QA.md)
 
-Der Hero reagiert auf Pointer-Bewegungen mit einem dezenten `perspective(1300px)`-Parallax-Effekt. Section-Reveals verwenden `IntersectionObserver`. Hintergrund-Orbs, Ring, Chart-Balken und organische Shapes werden ausschließlich per CSS animiert.
+## Technik
 
-Bei `prefers-reduced-motion: reduce` werden zeitbasierte Bewegungen und Transitionen praktisch deaktiviert; der Parallax-Layer wird nicht aktiviert.
+HTML5, CSS Custom Properties, Grid, Flexbox, gradients, blur, inline SVG und Vanilla JavaScript. Das Projekt verwendet keine Laufzeitabhängigkeiten außerhalb des Browsers.
 
-## Local / Offline
+## Motion-System
+
+Ambient Orbs und Case-Study-Visuals bewegen sich langsam. Das Hero-Dashboard reagiert auf Pointer-Bewegung, während Inhalte beim Eintritt in den Viewport per `IntersectionObserver` eingeblendet werden. Bei aktivierter Systemoption `prefers-reduced-motion` werden die relevanten Bewegungen praktisch deaktiviert.
+
+## Lokale Nutzung
 
 ```bash
 git clone https://github.com/Pierreg99/motion-studio.git
 cd motion-studio
 ```
 
-Danach `index.html` direkt im Browser öffnen oder einen beliebigen statischen Server verwenden.
+Danach `index.html` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
 
-## GitHub Pages
+## Deployment
 
-Branch `main` plus Root als Veröffentlichungsquelle verwenden. `.nojekyll` bleibt im Repository-Root erhalten.
+Das Projekt ist für statisches Hosting geeignet. `.nojekyll` ist Bestandteil des Repositories. Für GitHub Pages kann der `main`-Branch als Quelle für statische Dateien verwendet werden.
 
-## Documentation
+## Qualitätsziel
 
-- [Deutsch](docs/DE.md)
-- [English](docs/EN.md)
-- [Assets](docs/ASSETS.md)
-- [Deployment](docs/DEPLOYMENT.md)
-- [Accessibility](docs/ACCESSIBILITY.md)
-
-## Status
-
-Premium statischer Frontend-Prototyp mit modularer CSS-Architektur, Vanilla-JavaScript und eigenständigem SVG-Visual-System.
+Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung und wartbare modulare CSS-Strukturen. Weitere Ausbaustufen können vollständige Case-Study-Seiten, zusätzliche Accessibility-Prüfungen und automatisierte Browser-/Visual-Regression-Tests ergänzen.
