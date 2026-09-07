@@ -1,12 +1,12 @@
-# MOTION
+# CRYO MOTION — MOTION Studio Concept Websuite
 
-> Premium Digital Design Studio — art-directed static showcase for Brand, Digital and Motion.
+> Premium Digital Design Studio — art-directed static showcase for Brand, Digital, Motion and 3D SaaS experiences.
 
 ![Hero visual](assets/hero-visual.svg)
 
 ## Positionierung
 
-MOTION ist eine fiktive Premium-Digitalstudio-Website mit einer bewusst art-directed, editorialen Oberfläche. Die aktuelle Version verbindet eine dunkle visuelle Basis, Glasflächen, leuchtende Farbverläufe, abstrakte SVG-Visuals und zurückhaltende Motion-Interaktionen.
+CRYO MOTION ist eine fiktive Premium-Digitalstudio-Websuite mit einer bewusst art-directed, editorialen Oberfläche. Die aktuelle Ausbaustufe verbindet eine dunkle visuelle Basis, Glasflächen, leuchtende Farbverläufe, abstrakte SVG-Visuals und zurückhaltende Motion-Interaktionen mit zwei eigenständigen 3D-SaaS-Produktvarianten.
 
 ## Highlights
 
@@ -17,8 +17,7 @@ MOTION ist eine fiktive Premium-Digitalstudio-Website mit einer bewusst art-dire
 - Brand Experience, Web Experiences und Motion Systems als Kernleistungen
 - Zwei visuelle Case Studies: NOVA und AURA
 - Dedizierte Case-Study-Seiten unter `projects/`
-- Direkte Portfolio-Links zu NOVA und AURA
-- Case-to-case Navigation zwischen den Detailseiten
+- Zwei zusätzliche 3D-SaaS-Varianten unter `variants/`
 - Pointer-Parallax auf Desktop
 - IntersectionObserver Reveal-System
 - `prefers-reduced-motion`-Unterstützung
@@ -29,7 +28,7 @@ MOTION ist eine fiktive Premium-Digitalstudio-Website mit einer bewusst art-dire
 ## Architektur
 
 ```text
-motion-studio/
+Cryo-Motion-Studio-Concept-Websuite/
 ├── index.html
 ├── script.js
 ├── .nojekyll
@@ -42,13 +41,18 @@ motion-studio/
 ├── projects/
 │   ├── nova.html
 │   └── aura.html
+├── variants/
+│   ├── motion-flow.html
+│   └── motion-os.html
 ├── docs/
 │   ├── ACCESSIBILITY.md
+│   ├── ART_DIRECTION_3D.md
 │   ├── ASSETS.md
 │   ├── CASE-STUDIES.md
 │   ├── DE.md
-│   ├── EN.md
+│   ├── DEPLOYMENT.md
 │   ├── DESIGN_SYSTEM.md
+│   ├── EN.md
 │   └── VISUAL_QA.md
 └── styles/
     ├── tokens.css
@@ -61,6 +65,16 @@ motion-studio/
     └── case-studies.css
 ```
 
+## 3D SaaS Variants
+
+### MOTION FLOW
+
+`variants/motion-flow.html` ist eine eigenständige 3D-SaaS-Produktpräsentation mit interaktivem Browser-Interface, animiertem Produktkern, Analytics-Fläche und responsivem Layout.
+
+### MOTION OS
+
+`variants/motion-os.html` erweitert das Konzept zu einem Creative Operating System mit 3D-Device-Stage, modularer Produktnavigation, KPI-Flächen und animierten Systemmetriken.
+
 ## Case Studies
 
 ### NOVA / Digital Culture
@@ -71,7 +85,7 @@ motion-studio/
 
 `projects/aura.html` ist die ausführliche Präsentation für AURA mit sensorischer Interface-Idee, Interaction Language, Motion Direction und Systemmetriken.
 
-Die Portfolio-Karten in `index.html` führen direkt auf die jeweiligen Detailseiten. Die Seiten verlinken außerdem gegenseitig miteinander und zurück zur Portfolio-Übersicht.
+Die Portfolio-Karten führen auf die jeweiligen Detailseiten. Die Seiten verlinken außerdem gegenseitig miteinander und zurück zur Portfolio-Übersicht.
 
 ## Assets
 
@@ -82,34 +96,36 @@ Die Visuals werden als lokale SVG-Dateien versioniert. Dadurch bleiben die Grafi
 - `assets/nova-visual.svg` — NOVA Case Study
 - `assets/aura-visual.svg` — AURA Case Study
 
-Weitere Informationen: [`docs/ASSETS.md`](docs/ASSETS.md) und [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md).
+Weitere Informationen: [`docs/ASSETS.md`](docs/ASSETS.md), [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md) und [`docs/ART_DIRECTION_3D.md`](docs/ART_DIRECTION_3D.md).
 
 ## Dokumentation
 
 - [Deutsch — technische Dokumentation](docs/DE.md)
 - [English — technical documentation](docs/EN.md)
 - [Case Studies](docs/CASE-STUDIES.md)
+- [3D Art Direction](docs/ART_DIRECTION_3D.md)
 - [Design System](docs/DESIGN_SYSTEM.md)
 - [Accessibility](docs/ACCESSIBILITY.md)
 - [Asset Guide](docs/ASSETS.md)
+- [Deployment](docs/DEPLOYMENT.md)
 - [Visual QA](docs/VISUAL_QA.md)
 
 ## Technik
 
-HTML5, CSS Custom Properties, Grid, Flexbox, gradients, blur, inline SVG und Vanilla JavaScript. Das Projekt verwendet keine Laufzeitabhängigkeiten außerhalb des Browsers.
+HTML5, CSS Custom Properties, Grid, Flexbox, gradients, blur, SVG und Vanilla JavaScript. Das Projekt verwendet keine Laufzeitabhängigkeiten außerhalb des Browsers.
 
 ## Motion-System
 
-Ambient Orbs und Case-Study-Visuals bewegen sich langsam. Das Hero-Dashboard reagiert auf Pointer-Bewegung, während Inhalte beim Eintritt in den Viewport per `IntersectionObserver` eingeblendet werden. Bei aktivierter Systemoption `prefers-reduced-motion` werden die relevanten Bewegungen praktisch deaktiviert.
+Ambient Orbs und Case-Study-Visuals bewegen sich langsam. Das Hero-Dashboard und die Produktvarianten reagieren auf Pointer-Bewegung, während Inhalte beim Eintritt in den Viewport eingeblendet werden. Bei aktivierter Systemoption `prefers-reduced-motion` werden die relevanten Bewegungen praktisch deaktiviert.
 
 ## Lokale Nutzung
 
 ```bash
-git clone https://github.com/Pierreg99/motion-studio.git
-cd motion-studio
+git clone https://github.com/Pierreg99/Cryo-Motion-Studio-Concept-Websuite.git
+cd Cryo-Motion-Studio-Concept-Websuite
 ```
 
-Danach `index.html` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
+Danach `index.html` oder eine Datei unter `variants/` bzw. `projects/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
 
 ## Deployment
 
@@ -117,4 +133,4 @@ Das Projekt ist für statisches Hosting geeignet. `.nojekyll` ist Bestandteil de
 
 ## Qualitätsziel
 
-Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen und eigenständige Case-Study-Erlebnisse.
+Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen, eigenständige Case-Study-Erlebnisse und experimentelle 3D-SaaS-Präsentationen ohne WebGL-Abhängigkeit.
