@@ -6,7 +6,7 @@
 
 ## Positionierung
 
-CRYO MOTION ist eine fiktive Premium-Digitalstudio-Websuite mit einer bewusst art-directed, editorialen Oberfläche. Die aktuelle Ausbaustufe verbindet eine dunkle visuelle Basis, Glasflächen, leuchtende Farbverläufe, abstrakte SVG-Visuals und zurückhaltende Motion-Interaktionen mit zwei eigenständigen 3D-SaaS-Produktvarianten.
+CRYO MOTION ist eine fiktive Premium-Digitalstudio-Websuite mit einer bewusst art-directed, editorialen Oberfläche. Die aktuelle Ausbaustufe verbindet eine dunkle visuelle Basis, Glasflächen, leuchtende Farbverläufe, abstrakte SVG-Visuals und zurückhaltende Motion-Interaktionen mit mehreren eigenständigen Konzept- und 3D-SaaS-Varianten.
 
 ## Highlights
 
@@ -17,7 +17,8 @@ CRYO MOTION ist eine fiktive Premium-Digitalstudio-Websuite mit einer bewusst ar
 - Brand Experience, Web Experiences und Motion Systems als Kernleistungen
 - Zwei visuelle Case Studies: NOVA und AURA
 - Dedizierte Case-Study-Seiten unter `projects/`
-- Zwei zusätzliche 3D-SaaS-Varianten unter `variants/`
+- 3D-SaaS-Produktvarianten unter `variants/`
+- Eigenständige Konzeptwelten unter `concepts/`, `labs/` und weiteren Verzeichnissen
 - Pointer-Parallax auf Desktop
 - IntersectionObserver Reveal-System
 - `prefers-reduced-motion`-Unterstützung
@@ -44,6 +45,12 @@ Cryo-Motion-Studio-Concept-Websuite/
 ├── variants/
 │   ├── motion-flow.html
 │   └── motion-os.html
+├── concepts/
+│   └── motion-cinema.html
+├── labs/
+│   └── motion-editorial.html
+├── experiments/
+│   └── motion-lab.html
 ├── docs/
 │   ├── ACCESSIBILITY.md
 │   ├── ART_DIRECTION_3D.md
@@ -65,15 +72,27 @@ Cryo-Motion-Studio-Concept-Websuite/
     └── case-studies.css
 ```
 
-## 3D SaaS Variants
+## Konzept- und Produktvarianten
 
 ### MOTION FLOW
 
-`variants/motion-flow.html` ist eine eigenständige 3D-SaaS-Produktpräsentation mit interaktivem Browser-Interface, animiertem Produktkern, Analytics-Fläche und responsivem Layout.
+`variants/motion-flow.html` — eigenständige 3D-SaaS-Produktpräsentation mit interaktivem Browser-Interface, animiertem Produktkern, Analytics-Fläche und responsivem Layout.
 
 ### MOTION OS
 
-`variants/motion-os.html` erweitert das Konzept zu einem Creative Operating System mit 3D-Device-Stage, modularer Produktnavigation, KPI-Flächen und animierten Systemmetriken.
+`variants/motion-os.html` — Creative Operating System mit 3D-Device-Stage, modularer Produktnavigation, KPI-Flächen und animierten Systemmetriken.
+
+### MOTION CINEMA
+
+`concepts/motion-cinema.html` — cinematic Art-Direction-Variante mit Produkt als Hauptdarsteller, Lichtführung und kontrollierter Tiefenwirkung.
+
+### MOTION EDITORIAL
+
+`labs/motion-editorial.html` — helle Editorial-Variante mit typografischem Fokus, großzügigem Weißraum und einem einzigen visuellen Hero-Objekt.
+
+### MOTION LAB
+
+`experiments/motion-lab.html` — experimentelle Interface-Welt für Materialität, Motion States, Signale und visuelle Prototypen.
 
 ## Case Studies
 
@@ -84,8 +103,6 @@ Cryo-Motion-Studio-Concept-Websuite/
 ### AURA / Wellness Tech
 
 `projects/aura.html` ist die ausführliche Präsentation für AURA mit sensorischer Interface-Idee, Interaction Language, Motion Direction und Systemmetriken.
-
-Die Portfolio-Karten führen auf die jeweiligen Detailseiten. Die Seiten verlinken außerdem gegenseitig miteinander und zurück zur Portfolio-Übersicht.
 
 ## Assets
 
@@ -125,7 +142,7 @@ git clone https://github.com/Pierreg99/Cryo-Motion-Studio-Concept-Websuite.git
 cd Cryo-Motion-Studio-Concept-Websuite
 ```
 
-Danach `index.html` oder eine Datei unter `variants/` bzw. `projects/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
+Danach `index.html` oder eine Datei unter `variants/`, `projects/`, `concepts/`, `labs/` bzw. `experiments/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
 
 ## Deployment
 
@@ -133,4 +150,4 @@ Das Projekt ist für statisches Hosting geeignet. `.nojekyll` ist Bestandteil de
 
 ## Qualitätsziel
 
-Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen, eigenständige Case-Study-Erlebnisse und experimentelle 3D-SaaS-Präsentationen ohne WebGL-Abhängigkeit.
+Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen, eigenständige Case-Study-Erlebnisse und eine wachsende Bibliothek unterschiedlicher Motion-/3D-/Editorial-Konzeptwelten.
