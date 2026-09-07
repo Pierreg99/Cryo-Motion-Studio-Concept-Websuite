@@ -16,6 +16,9 @@ MOTION ist eine fiktive Premium-Digitalstudio-Website mit einer bewusst art-dire
 - Sticky Glass-Navigation und native Anchor-Navigation
 - Brand Experience, Web Experiences und Motion Systems als Kernleistungen
 - Zwei visuelle Case Studies: NOVA und AURA
+- Dedizierte Case-Study-Seiten unter `projects/`
+- Direkte Portfolio-Links zu NOVA und AURA
+- Case-to-case Navigation zwischen den Detailseiten
 - Pointer-Parallax auf Desktop
 - IntersectionObserver Reveal-System
 - `prefers-reduced-motion`-Unterstützung
@@ -36,9 +39,13 @@ motion-studio/
 │   ├── hero-visual.svg
 │   ├── nova-visual.svg
 │   └── aura-visual.svg
+├── projects/
+│   ├── nova.html
+│   └── aura.html
 ├── docs/
 │   ├── ACCESSIBILITY.md
 │   ├── ASSETS.md
+│   ├── CASE-STUDIES.md
 │   ├── DE.md
 │   ├── EN.md
 │   ├── DESIGN_SYSTEM.md
@@ -50,8 +57,21 @@ motion-studio/
     ├── components-2.css
     ├── components-3.css
     ├── components-4.css
-    └── animations.css
+    ├── animations.css
+    └── case-studies.css
 ```
+
+## Case Studies
+
+### NOVA / Digital Culture
+
+`projects/nova.html` ist die ausführliche Präsentation für die kreative Plattform NOVA mit Hero-Artwork, Creative Direction, Design-System-Erläuterung, Motion-Prinzipien und ausgewählten Systemmetriken.
+
+### AURA / Wellness Tech
+
+`projects/aura.html` ist die ausführliche Präsentation für AURA mit sensorischer Interface-Idee, Interaction Language, Motion Direction und Systemmetriken.
+
+Die Portfolio-Karten in `index.html` führen direkt auf die jeweiligen Detailseiten. Die Seiten verlinken außerdem gegenseitig miteinander und zurück zur Portfolio-Übersicht.
 
 ## Assets
 
@@ -68,6 +88,7 @@ Weitere Informationen: [`docs/ASSETS.md`](docs/ASSETS.md) und [`docs/DESIGN_SYST
 
 - [Deutsch — technische Dokumentation](docs/DE.md)
 - [English — technical documentation](docs/EN.md)
+- [Case Studies](docs/CASE-STUDIES.md)
 - [Design System](docs/DESIGN_SYSTEM.md)
 - [Accessibility](docs/ACCESSIBILITY.md)
 - [Asset Guide](docs/ASSETS.md)
@@ -96,4 +117,4 @@ Das Projekt ist für statisches Hosting geeignet. `.nojekyll` ist Bestandteil de
 
 ## Qualitätsziel
 
-Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung und wartbare modulare CSS-Strukturen. Weitere Ausbaustufen können vollständige Case-Study-Seiten, zusätzliche Accessibility-Prüfungen und automatisierte Browser-/Visual-Regression-Tests ergänzen.
+Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen und eigenständige Case-Study-Erlebnisse.
