@@ -2,90 +2,48 @@
 
 ## 1. Zweck
 
-MOTION ist ein fiktives Premium-Digitalstudio als statischer Website-Prototyp. Die Seite demonstriert eine hochwertige Kombination aus Brand Experience, Web Experience, Motion Design und abstrakter visueller Gestaltung.
+MOTION ist ein fiktives Premium-Digitalstudio als statischer Website-Prototyp. Die Seite verbindet Brand Experience, Web Experience, Motion Design und abstrakte visuelle Gestaltung.
 
 ## 2. Technischer Ansatz
 
-Die Anwendung verwendet keine Frontend-Frameworks, keine Build-Tools und keine externen UI-Bibliotheken. Das Frontend basiert auf statischem HTML, modularen CSS-Dateien und einem kleinen Vanilla-JavaScript-Layer.
+Die Anwendung verwendet keine Frontend-Frameworks, keine Build-Tools und keine externen UI-Bibliotheken. Die Basis ist statisches HTML, modularer CSS und ein kleiner Vanilla-JavaScript-Layer.
 
-**Kerntechnologien:**
+**Kerntechnologien:** HTML5, CSS3 Custom Properties, Grid, Flexbox, Gradients, Blur, Vanilla JavaScript, IntersectionObserver und `prefers-reduced-motion`.
 
-- HTML5
-- CSS3 mit Custom Properties, Grid, Flexbox, Gradients und Blur
-- Vanilla JavaScript
-- IntersectionObserver
-- native Anchor-Navigation
-- CSS `prefers-reduced-motion`
+## 3. Einstieg und Struktur
 
-## 3. Seitenaufbau
+`index.html` ist der einzige kanonische HTML-Einstiegspunkt.
 
-### Navigation
+`script.js` übernimmt Scroll-Reveal, Smooth-Scrolling und den Desktop-Parallax-Effekt des Hero-Dashboards.
 
-Die fixe Glass-Navigation enthält die MOTION-Wortmarke, interne Anchor-Links und den primären Projekt-CTA.
+`styles/` trennt Tokens, Basiselemente, Komponenten, Responsive Regeln und Animationen.
 
-### Hero
+`assets/` enthält eigenständige SVG-Visuals für Logo, Hero, NOVA und AURA.
 
-Der Hero kombiniert eine große Editorial-Headline mit einem abstrahierten Browser-/Dashboard-Visual. Das Visual wird ausschließlich aus HTML und CSS aufgebaut und simuliert eine hochwertige digitale Markenwelt.
+`docs/` enthält technische, visuelle, Accessibility- und Deployment-Dokumentation.
 
-### Leistungen
+## 4. Visual System
 
-Drei gleichgewichtete Service Cards bilden die Kernkompetenzen ab:
+Die Website nutzt eine helle, galerieartige Premium-Oberfläche mit transluzenten Panels, feinen Konturen, Blau-/Violett-/Pink-Verläufen, organischen Formen und einem abstrakten Monitor-/Browser-Motiv. Die SVGs sind original und offline-fähig.
 
-- Brand Experience
-- Web Experiences
-- Motion Systems
+## 5. Motion System
 
-### Projekte
+Ambient Lights schweben langsam. Das Hero-Dashboard reagiert auf Pointer-Bewegung in einer `perspective(1300px)`-Szene. Ring, Chart-Balken und Case-Study-Blobs animieren sich ausschließlich per CSS. Inhalte werden über `IntersectionObserver` als Fade-Up eingeblendet.
 
-Die Case Studies NOVA und AURA verwenden unterschiedliche helle Farbwelten und organische CSS-Shapes. Die Shapes werden per `border-radius`-Morphing und Rotation animiert.
+## 6. Accessibility
 
-### Kontakt
+Die Navigation und primären Aktionen sind native Links. Abschnittsziele verwenden eindeutige IDs. Bei `prefers-reduced-motion: reduce` werden Bewegungen und Übergänge praktisch deaktiviert und der Pointer-Parallax-Layer nicht aktiviert. Weitere Hinweise stehen in [`ACCESSIBILITY.md`](ACCESSIBILITY.md).
 
-Der Abschluss der Seite führt über einen zentralen CTA direkt zu `mailto:hello@motion.studio`.
+## 7. Responsive Verhalten
 
-## 4. Motion-System
+Desktop verwendet eine mehrspaltige Hero- und Projektkomposition. Auf Tablet und Mobile wandert das Visual unter den Hero-Text, Service Cards und Projekte werden einspaltig, und die Navigation wird reduziert.
 
-Die Animationen sind bewusst langsam und subtil:
+## 8. Performance
 
-- Ambient Lights bewegen sich in weiten Bahnen.
-- Gradient-Elemente und organische Shapes verändern ihre Form.
-- Hero-Visuals reagieren auf Pointer-Bewegungen.
-- Inhalte erscheinen beim Erreichen des Viewports per Fade-Up.
+Keine externen Bilder, Google Fonts, CDNs, Framework-Runtimes oder Build-Schritte. SVGs sind textbasierte Dateien; Animationen setzen vorwiegend auf `transform` und `opacity`.
 
-Der Reveal-Mechanismus verwendet `IntersectionObserver`, um nicht sichtbare Inhalte zunächst mit reduzierter Opazität und vertikaler Verschiebung darzustellen.
+## 9. Deployment
 
-## 5. Accessibility
+Das Projekt kann direkt lokal geöffnet oder über statisches Hosting wie GitHub Pages ausgeliefert werden. `.nojekyll` unterstützt die unveränderte statische Auslieferung.
 
-Die Navigation besteht aus nativen Links. Abschnittsziele verwenden IDs und `scroll-margin-top`, damit die fixe Kopfzeile den Inhalt beim Scrollen nicht verdeckt.
-
-Bei aktivierter Systemeinstellung `prefers-reduced-motion: reduce` werden Animationen und Übergänge praktisch deaktiviert und Reveal-Elemente unmittelbar sichtbar gemacht. Der Pointer-basierte 3D-Effekt wird bei reduzierter Bewegung nicht aktiviert.
-
-## 6. Responsive Verhalten
-
-Desktop verwendet mehrspaltige Kompositionen. Ab kleineren Breakpoints wird das Layout stufenweise auf eine Spalte reduziert:
-
-- Navigation wird vereinfacht.
-- Hero-Visual wandert unter den Text.
-- Service Cards stapeln sich.
-- Case Studies werden vertikal angeordnet.
-- Footer-Inhalte umbrechen.
-
-## 7. Performance-Prinzipien
-
-Es werden keine externen Bilder, Google Fonts, CDNs oder großen JavaScript-Frameworks geladen. Die visuellen Elemente bestehen aus CSS, HTML und Inline-SVG. Animationen arbeiten überwiegend mit transform- und opacity-basierten Eigenschaften.
-
-## 8. Repository-Modularität
-
-Die aktuelle Codebasis trennt Design Tokens, Basiselemente, Komponenten und Animationen in mehrere CSS-Dateien. `index.html` ist der primäre Einstiegspunkt; `script.js` kapselt die interaktiven Funktionen.
-
-## 9. Bekannter Wartungspunkt
-
-`motion.html` und `index.html` enthalten derzeit denselben HTML-Stand. Für ein produktives Repository sollte nur ein kanonischer Einstieg verwendet werden, sofern keine bewusst getrennten Entry Points benötigt werden.
-
-## 10. Deployment
-
-Das Projekt ist als statische Website für GitHub Pages geeignet. Die Datei `.nojekyll` verhindert die Verarbeitung durch Jekyll und unterstützt die direkte Auslieferung der statischen Projektdateien.
-
-## 11. Weiterentwicklung
-
-Der nächste sinnvolle Ausbau umfasst eine einheitliche Entry-Point-Strategie, vollständig ausgearbeitete Projektseiten, zusätzliche semantische Accessibility-Prüfungen sowie automatisierte Browser-/Visual-Regression-Tests.
+Siehe [`DEPLOYMENT.md`](DEPLOYMENT.md).
