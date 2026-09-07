@@ -1,1 +1,1 @@
-:root{--bg:#080812;--surface:rgba(255,255,255,.065);--strong:rgba(255,255,255,.12);--line:rgba(255,255,255,.14);--text:#f8f8ff;--muted:#a7a8bd;--violet:#8d67ff;--blue:#54c8ff;--pink:#ff6ab1;--lime:#c4ff78;--radius:28px;--container:1180px}
+:root{--bg:#080812;--surface:rgba(255,255,255,.065);--strong:rgba(255,255,255,.12);--line:rgba(255,255,255,.14);--text:#f8f8ff;--muted:#a7a8bd;--white:#fff;--violet:#8d67ff;--blue:#54c8ff;--pink:#ff6ab1;--lime:#c4ff78;--radius:28px;--container:1180px;--ease:cubic-bezier(.2,.7,.2,1);--shadow:0 30px 90px rgba(0,0,0,.35)}
