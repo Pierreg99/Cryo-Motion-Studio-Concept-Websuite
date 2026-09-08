@@ -19,6 +19,8 @@ CRYO MOTION ist eine fiktive Premium-Digitalstudio-Websuite mit einer bewusst ar
 - Dedizierte Case-Study-Seiten unter `projects/`
 - 3D-SaaS-Produktvarianten unter `variants/`
 - Eigenständige Konzeptwelten unter `concepts/`, `labs/` und weiteren Verzeichnissen
+- Zentraler Version Hub unter `versions/hub.html`
+- Filterbare Produkt-, Case-Study-, Concept- und Lab-Navigation
 - Pointer-Parallax auf Desktop
 - IntersectionObserver Reveal-System
 - `prefers-reduced-motion`-Unterstützung
@@ -51,6 +53,8 @@ Cryo-Motion-Studio-Concept-Websuite/
 │   └── motion-editorial.html
 ├── experiments/
 │   └── motion-lab.html
+├── versions/
+│   └── hub.html
 ├── docs/
 │   ├── ACCESSIBILITY.md
 │   ├── ART_DIRECTION_3D.md
@@ -60,6 +64,8 @@ Cryo-Motion-Studio-Concept-Websuite/
 │   ├── DEPLOYMENT.md
 │   ├── DESIGN_SYSTEM.md
 │   ├── EN.md
+│   ├── SAAS-VARIANTS.md
+│   ├── VERSION-HUB.md
 │   └── VISUAL_QA.md
 └── styles/
     ├── tokens.css
@@ -71,6 +77,12 @@ Cryo-Motion-Studio-Concept-Websuite/
     ├── animations.css
     └── case-studies.css
 ```
+
+## Version Hub
+
+`versions/hub.html` ist das zentrale Launchpad für alle Experiences. Die Oberfläche bündelt Products, Case Studies, Concepts, Labs und den Main-Einstiegspunkt in einer filterbaren Übersicht.
+
+Dokumentation: [`docs/VERSION-HUB.md`](docs/VERSION-HUB.md)
 
 ## Konzept- und Produktvarianten
 
@@ -121,6 +133,8 @@ Weitere Informationen: [`docs/ASSETS.md`](docs/ASSETS.md), [`docs/DESIGN_SYSTEM.
 - [English — technical documentation](docs/EN.md)
 - [Case Studies](docs/CASE-STUDIES.md)
 - [3D Art Direction](docs/ART_DIRECTION_3D.md)
+- [Version Hub](docs/VERSION-HUB.md)
+- [SaaS Variants](docs/SAAS-VARIANTS.md)
 - [Design System](docs/DESIGN_SYSTEM.md)
 - [Accessibility](docs/ACCESSIBILITY.md)
 - [Asset Guide](docs/ASSETS.md)
@@ -142,7 +156,7 @@ git clone https://github.com/Pierreg99/Cryo-Motion-Studio-Concept-Websuite.git
 cd Cryo-Motion-Studio-Concept-Websuite
 ```
 
-Danach `index.html` oder eine Datei unter `variants/`, `projects/`, `concepts/`, `labs/` bzw. `experiments/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
+Danach `index.html` oder eine Datei unter `variants/`, `projects/`, `concepts/`, `labs/`, `experiments/` oder `versions/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
 
 ## Deployment
 
