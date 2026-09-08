@@ -20,6 +20,8 @@ CRYO MOTION ist eine fiktive Premium-Digitalstudio-Websuite mit einer bewusst ar
 - 3D-SaaS-Produktvarianten unter `variants/`
 - Eigenständige Konzeptwelten unter `concepts/`, `labs/` und weiteren Verzeichnissen
 - Zentraler Version Hub unter `versions/hub.html`
+- Live-Demo-Navigation mit Original- und 3D-Showcase-Einstiegen
+- Veredelte 3D-Showcase-Layer unter `showcase/`
 - Filterbare Produkt-, Case-Study-, Concept- und Lab-Navigation
 - Pointer-Parallax auf Desktop
 - IntersectionObserver Reveal-System
@@ -55,6 +57,10 @@ Cryo-Motion-Studio-Concept-Websuite/
 │   └── motion-lab.html
 ├── versions/
 │   └── hub.html
+├── showcase/
+│   ├── motion-flow-3d.html
+│   ├── motion-os-3d.html
+│   └── motion-cinema-3d.html
 ├── docs/
 │   ├── ACCESSIBILITY.md
 │   ├── ART_DIRECTION_3D.md
@@ -80,9 +86,23 @@ Cryo-Motion-Studio-Concept-Websuite/
 
 ## Version Hub
 
-`versions/hub.html` ist das zentrale Launchpad für alle Experiences. Die Oberfläche bündelt Products, Case Studies, Concepts, Labs und den Main-Einstiegspunkt in einer filterbaren Übersicht.
+`versions/hub.html` ist das zentrale Launchpad für alle Experiences. Die Oberfläche bündelt Products, Case Studies, Concepts, Labs, die Main Suite und veredelte 3D-Demos in einer filterbaren Übersicht.
 
 Dokumentation: [`docs/VERSION-HUB.md`](docs/VERSION-HUB.md)
+
+## 3D Showcases
+
+### MOTION FLOW 3D
+
+`showcase/motion-flow-3d.html` — volumetrischer Core, doppelte Orbit-Geometrie, Glasprisma und Floating Signals.
+
+### MOTION OS 3D
+
+`showcase/motion-os-3d.html` — 3D-Device-Stage, Glasrahmen, Creative Kernel und KPI-Layer.
+
+### MOTION CINEMA 3D
+
+`showcase/motion-cinema-3d.html` — filmische Bühne, Lichtlauf, Morph-Core und mehrschichtige Orbit-Geometrie.
 
 ## Konzept- und Produktvarianten
 
@@ -147,7 +167,7 @@ HTML5, CSS Custom Properties, Grid, Flexbox, gradients, blur, SVG und Vanilla Ja
 
 ## Motion-System
 
-Ambient Orbs und Case-Study-Visuals bewegen sich langsam. Das Hero-Dashboard und die Produktvarianten reagieren auf Pointer-Bewegung, während Inhalte beim Eintritt in den Viewport eingeblendet werden. Bei aktivierter Systemoption `prefers-reduced-motion` werden die relevanten Bewegungen praktisch deaktiviert.
+Ambient Orbs und Case-Study-Visuals bewegen sich langsam. Das Hero-Dashboard und die Produktvarianten reagieren auf Pointer-Bewegung. Die neuen 3D-Showcases ergänzen eigene Orbit-, Morph-, Light-sweep- und Device-Animationen. Bei aktivierter Systemoption `prefers-reduced-motion` werden die relevanten Bewegungen praktisch deaktiviert.
 
 ## Lokale Nutzung
 
@@ -156,7 +176,7 @@ git clone https://github.com/Pierreg99/Cryo-Motion-Studio-Concept-Websuite.git
 cd Cryo-Motion-Studio-Concept-Websuite
 ```
 
-Danach `index.html` oder eine Datei unter `variants/`, `projects/`, `concepts/`, `labs/`, `experiments/` oder `versions/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
+Danach `index.html` oder eine Datei unter `variants/`, `projects/`, `concepts/`, `labs/`, `experiments/`, `showcase/` oder `versions/` direkt öffnen oder einen beliebigen statischen HTTP-Server verwenden.
 
 ## Deployment
 
@@ -164,4 +184,4 @@ Das Projekt ist für statisches Hosting geeignet. `.nojekyll` ist Bestandteil de
 
 ## Qualitätsziel
 
-Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen, eigenständige Case-Study-Erlebnisse und eine wachsende Bibliothek unterschiedlicher Motion-/3D-/Editorial-Konzeptwelten.
+Die aktuelle Ausbaustufe priorisiert Art Direction, klare visuelle Hierarchie, leichte Interaktion, Offline-Nutzung, wartbare modulare CSS-Strukturen, eigenständige Case-Study-Erlebnisse, direkte Live-Demo-Navigation und eine wachsende Bibliothek unterschiedlicher Motion-/3D-/Editorial-Konzeptwelten.
